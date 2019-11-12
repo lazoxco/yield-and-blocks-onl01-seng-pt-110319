@@ -3,6 +3,7 @@ def hello_t(array)
   #   puts "#{name}"
   # end
   
+  if block_given?
   i = 0 
   
   
@@ -10,8 +11,14 @@ def hello_t(array)
     yield(array[i])
     i += 1
   end
+  
   array
+  
+else
+  puts "Hey! No block was given!"
 end
+end
+
 
 # call your method here!
 
